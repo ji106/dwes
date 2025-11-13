@@ -7,16 +7,20 @@
 </head>
 <body>
     <?php
+    // Creo las variables
     $nombre_alumno = "Jiaxin Ji";
     $modulo = "Desarrollo Web en Entorno Servidor";
     $nota_media = 7.5;
     $es_matriculado = true;
 
+    // Imprimo las 3 primeras variables
     echo "<h1>$nombre_alumno</h1>";
     echo "<h2>$modulo</h2>";
+    // Diferenciamos entre comillas simples (imprime la variable, el dato no) y dobles (imprime el dato dentro de la variable)
     echo "<p>Mi nota media actual es: $nota_media</p>";
     echo '<p>Mi nota media actual es: $nota_media</p>';
 
+    // Creamos el tipo de puntuación con if/elseif/else
     if ($nota_media >= 9) {
         echo "<p>Sobresaliente</p>";
     } elseif ($nota_media >= 7 && $nota_media < 9) {
@@ -27,10 +31,12 @@
         echo "<p>Suspenso</p>";
     }
 
+    // Comprobamos que está matriculado
     if ($es_matriculado == true) {
         echo "<p>Estado: Alumno matriculado</p>";
     }
 
+    // Creacion de tabla
     echo "<table border='1'>";
     $i = 1;
     while ($i <= 5) {
